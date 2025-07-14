@@ -108,6 +108,7 @@ String ESPBattery::stateToString(int state) {
 		case ESPBATTERY_LOW:
 			return "LOW";
 	}
+  return "Unknown";
 }
 
 /////////////////////////////////////////////////////////////////
