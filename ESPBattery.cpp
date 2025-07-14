@@ -22,7 +22,7 @@ ESPBattery::ESPBattery(byte analog_pin, int polling_interval_ms, int min_lvl, in
 
 void ESPBattery::readData() {
   last_read = millis();
-  level = analogRead(pin);
+  level = analogRead(pin) / 2.44f;
   v = (float) level / 1000 / (10000. / (47000 + 10000));
   percentage = map(level, min_level, max_level, 0, 100);
 
